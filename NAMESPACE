@@ -1,0 +1,9 @@
+import(randtoolbox, quadprog)
+
+export(GRApprox, IS, resample, IMH, iterLap)
+
+S3method(print, mixDist)
+S3method(summary, mixDist)
+S3method(print, summary.mixDist)
+
+useDynLib(iterLap)

@@ -1,0 +1,25 @@
+citHeader("To cite iterLap in publications use:")
+
+citEntry(entry = "Manual",
+         title = "iterLap: Iterated Laplace Approximations",
+         author = "Bornkamp, B.",
+         year = 2011,
+         url = "http://CRAN.R-project.org/package=iterLap",
+
+         textVersion =
+         "Bornkamp, B. (2011) iterLap: Iterated Laplace Approximations.
+          URL http://CRAN.R-project.org/package=iterLap"
+)
+
+citEntry(
+ entry="Article",
+ title="Approximating Probability Densities by Iterated
+  Laplace Approximations",
+ journal="Journal of Computational and Graphical Statistics",
+ volume= "XX",
+ pages="X-X",
+ year="2011",
+ author="B. Bornkamp",
+ textVersion="Bornkamp, B. (2011) Approximating Probability Densities by Iterated
+  Laplace Approximations. Journal of Computational and Graphical Statistics, to appear" )
+
