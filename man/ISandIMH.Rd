@@ -1,4 +1,4 @@
-\name{IS/IMH}
+\name{Importance Sampling and independence Metropolis Hastings sampling}
 \alias{IS}
 \alias{IMH}
 \title{
