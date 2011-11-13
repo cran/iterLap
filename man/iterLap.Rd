@@ -73,8 +73,9 @@ iterLap(post, ..., GRobj = NULL, vectorized = FALSE, startVals = NULL,
     return(-0.5*sum((y*cc)^2))
   }
 
+  ###############################################################
+  ## first perform multi mode Laplace approximation
   start <- rbind(rep(0,10),rep(-1.5,10),rep(1.5,10))
-  ## multiple mode Laplace approximation
   grObj <- GRApprox(banana, start, b = 0.03, sigma12 = 100)
   ## print mixDist object
   grObj
@@ -92,18 +93,28 @@ iterLap(post, ..., GRobj = NULL, vectorized = FALSE, startVals = NULL,
   ## acceptance rate
   imObj$accept
 
-  ## now use iterated Laplace approximation 
+  ###############################################################
+  ## now use iterated Laplace approximation
+  ## and use Laplace approximation above as starting point
   iL <- iterLap(banana, GRobj = grObj, b = 0.03, sigma12 = 100)
   isObj2 <- IS(iL, nSim=10000, df = 100, post=banana, b = 0.03,
                sigma12 = 100)
   ## residual resampling to obtain unweighted sample
   samples <- resample(1000, isObj2)
+  ## plot samples in the first two dimensions
   plot(samples[,1], samples[,2], xlim=c(-40,40), ylim = c(-40,20))
   ## independence Metropolis algorithm
   imObj2 <- IMH(iL, nSim=1000, df = 10, post=banana, b = 0.03,
                 sigma12 = 100)
   imObj2$accept
   plot(imObj2$samp[,1], imObj2$samp[,2], xlim=c(-40,40), ylim = c(-40,20))
+
+  ## IMH and IS can exploit multiple cores, example for two cores
+  \dontrun{
+  isObj3 <- IS(iL, nSim=10000, df = 100, post=banana, b = 0.03,
+               sigma12 = 100, cores = 2)
+  }
+
 }
 \keyword{ misc }
 

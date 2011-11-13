@@ -11,8 +11,8 @@
 \tabular{ll}{
 Package: \tab iterLap\cr
 Type: \tab Package\cr
-Version: \tab 1.0-2\cr
-Date: \tab 2011-10-22\cr
+Version: \tab 1.1-1\cr
+Date: \tab 2011-11-13\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 }

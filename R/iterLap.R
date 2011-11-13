@@ -365,8 +365,7 @@ IS <- function(obj, nSim, df = 4, post, vectorized = FALSE,
     if(cores == 1){
       vals1 <- lapply(sampList, function(x) post(x, ...))
     } else {
-      #vals1 <- mclapply(sampList, function(x) post(x, ...), mc.cores = cores)
-      stop("currently only cores = 1 possible")
+      vals1 <- mclapply(sampList, function(x) post(x, ...), mc.cores = cores)
     }
     vals1 <- unlist(vals1)
   }

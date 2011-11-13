@@ -31,8 +31,10 @@ IMH(obj, nSim, df = 4, post, vectorized = FALSE, cores = 1, ...)
         Logical determining, whether \code{post} is vectorized
       }
       \item{cores}{
-	number of cores in your computer (only relevant on systems, where
-    the multicore package runs, ie. mostly unix systems), currently not implemented
+	number of cores you want to use to evaluate the target density
+        (uses the mclapply function from the parallel package). For
+        Windows machines, a value > 1 will have no effect, see mclapply
+        help for details.
 }
   \item{\dots}{
     additional arguments passed to \code{post}.

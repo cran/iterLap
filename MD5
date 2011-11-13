@@ -1,11 +1,11 @@
-2781ecd624019d0f759a92a091f5d30e *DESCRIPTION
+9f1361af23108e32ec9d2f31edf05466 *DESCRIPTION
 4ede23474c6aad928ff4d38d3ff39ffd *NAMESPACE
-90b350c391b4a5764d4e895319b4af0c *R/iterLap.R
+1ab2939313c5dae4d0e41e84b1b105dc *R/iterLap.R
 9a84cf1833c434985c5f717d2bd71ed8 *inst/CITATION
 c14d8533d27b0ea2bb97e0bbe2cd90b6 *man/GRApprox.Rd
-604eb4485a63f261c7855cc8045614be *man/ISandIMH.Rd
+14bb983bbbd9250554d46ef5f1968b5c *man/ISandIMH.Rd
 5e6b6b6f9a5a4382b003327fdc375bcb *man/iterLap-internal.Rd
-c588b2f84ecdf69af5d3a8430d611d6c *man/iterLap-package.Rd
-82cbcf4403525a61cf60663a82157b76 *man/iterLap.Rd
+93e671f2a7615bfde2c82e43050dc9fb *man/iterLap-package.Rd
+c8751428ca6ab173d3aae5d0ce243f88 *man/iterLap.Rd
 6ab75068d359c4f2bee6e04ebf27a0d9 *man/resample.Rd
 309ba038b6c3a8fbdff3582238da826f *src/iterLap.c
