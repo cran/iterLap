@@ -61,7 +61,7 @@ iterLap(post, ..., GRobj = NULL, vectorized = FALSE, startVals = NULL,
 \references{
   Bornkamp, B. (2011). Approximating Probability Densities by Iterated
   Laplace Approximations, \emph{Journal of Computational and Graphical
-  Statistics}, \emph{to appear}
+  Statistics}, \bold{20}(3), 656--669.
 }
 
 \examples{

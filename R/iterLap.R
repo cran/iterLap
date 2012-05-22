@@ -35,7 +35,8 @@ nlopt <- function(par, fn, ...,   method = c("nlminb", "nlm", "Nelder-Mead", "BF
       optres <- nlminb(start = par, objective = fn, ..., control=control,
                        lower=lower, upper=upper)
       par <- optres$par
-      hess <- calcHess(fn, par, hesscontrol, ...)
+      hess <- optimHess(par, fn, gr=NULL, ..., control = hesscontrol)
+      hess <- 0.5 * (hess + t(hess))
       minimum <- optres$objective
     } else {
       optres <- optim(par, fn, ..., method = method,
@@ -47,16 +48,6 @@ nlopt <- function(par, fn, ...,   method = c("nlminb", "nlm", "Nelder-Mead", "BF
     conv <- optres$convergence
   }
   list(par=par, hessian=hess, minimum=minimum, conv = conv)
-}
-
-calcHess <- function(fn, par, control = list(), ...){
-  fn1 <- function(par) fn(par, ...)
-  con <- list(fnscale = 1, parscale = rep.int(1, length(par)),
-              ndeps = rep.int(0.001, length(par)))
-  nmsC <- names(con)
-  con[(namc <- names(control))] <- control
-  hess <- .Internal(optimhess(par, fn1, NULL, con))
-  0.5 * (hess + t(hess))
 }
 
 iterLap.control <- function(pardim, gridSize = ceiling(50*pardim^1.25),

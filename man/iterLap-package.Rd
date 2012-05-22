@@ -11,8 +11,8 @@
 \tabular{ll}{
 Package: \tab iterLap\cr
 Type: \tab Package\cr
-Version: \tab 1.1-1\cr
-Date: \tab 2011-11-13\cr
+Version: \tab 1.1-2\cr
+Date: \tab 2012-05-22\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 }
@@ -34,7 +34,7 @@ Maintainer: Bjoern Bornkamp <bbnkmp@gmail.com>
 \references{
   Bornkamp, B. (2011). Approximating Probability Densities by Iterated
   Laplace Approximations, \emph{Journal of Computational and Graphical
-  Statistics}, \emph{to appear}
+  Statistics}, \bold{20}(3), 656--669.
 }
 
 \keyword{ package }

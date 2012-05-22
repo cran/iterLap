@@ -48,7 +48,7 @@ GRApprox(post, start, grad, method = c("nlminb", "nlm", "Nelder-Mead", "BFGS"),
 
   Bornkamp, B. (2011). Approximating Probability Densities by Iterated
   Laplace Approximations, \emph{Journal of Computational and Graphical
-  Statistics}, \emph{to appear}
+  Statistics}, \bold{20}(3), 656--669.
 }
 \author{
   Bjoern Bornkamp
