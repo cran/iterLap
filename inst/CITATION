@@ -1,25 +1,22 @@
 citHeader("To cite iterLap in publications use:")
 
-citEntry(entry = "Manual",
+year <- sub("-.*", "", meta$Date)
+note <- sprintf("R package version %s", meta$Version)
+
+bibentry(bibtype = "Manual",
          title = "iterLap: Iterated Laplace Approximations",
-         author = "Bornkamp, B.",
-         year = 2011,
-         url = "http://CRAN.R-project.org/package=iterLap",
+         author = person("Bjoern", "Bornkamp"),
+         year = year,
+         note = note,
+         url = "https://CRAN.R-project.org/package=iterLap")
 
-         textVersion =
-         "Bornkamp, B. (2011) iterLap: Iterated Laplace Approximations.
-          URL http://CRAN.R-project.org/package=iterLap"
-)
-
-citEntry(
- entry="Article",
- title="Approximating Probability Densities by Iterated
+bibentry(
+  bibtype="Article",
+  title="Approximating Probability Densities by Iterated
   Laplace Approximations",
- journal="Journal of Computational and Graphical Statistics",
- volume= "20",
- pages="656-669",
- year="2011",
- author="B. Bornkamp",
- textVersion="Bornkamp, B. (2011) Approximating Probability Densities by Iterated
-  Laplace Approximations. Journal of Computational and Graphical Statistics, 20, 656-669" )
+  journal="Journal of Computational and Graphical Statistics",
+  volume= "20",
+  pages="656-669",
+  year="2011",
+  author=person("Bjoern", "Bornkamp"))
 

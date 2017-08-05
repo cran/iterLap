@@ -1,4 +1,4 @@
-import(randtoolbox, quadprog)
+import(randtoolbox, quadprog, parallel)
 
 export(GRApprox, IS, resample, IMH, iterLap)
 
@@ -6,4 +6,8 @@ S3method(print, mixDist)
 S3method(summary, mixDist)
 S3method(print, summary.mixDist)
 
-useDynLib(iterLap)
+useDynLib(iterLap, .registration = TRUE)
+
+importFrom("stats", "cov2cor", "kmeans", "nlm", "nlminb", "optim",
+           "optimHess", "qnorm", "qt", "rchisq", "rmultinom", "rnorm",
+           "rt", "runif")
