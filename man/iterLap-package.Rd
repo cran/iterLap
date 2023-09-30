@@ -8,14 +8,6 @@
   Implementation of iterLap
 }
 \details{
-\tabular{ll}{
-Package: \tab iterLap\cr
-Type: \tab Package\cr
-Version: \tab 1.1-2\cr
-Date: \tab 2012-05-22\cr
-License: \tab GPL\cr
-LazyLoad: \tab yes\cr
-}
 This package implements the multiple mode Laplace approximation
 by Gelman and Rubin (via function GRApprox) and the iterated
 Laplace approximation (via the function iterLap). Both functions
